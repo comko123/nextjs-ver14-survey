@@ -9,8 +9,8 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .gradient-btn {
+    @apply font-bold rounded-2xl bg-gradient-to-tl from-rose-400 via-amber-300 to-lime-400 text-white transition hover:scale-90 cursor-pointer;
   }
 }
 
@@ -18,4 +18,9 @@
   .hover-text {
     @apply hover:text-indigo-500 cursor-pointer font-bold;
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

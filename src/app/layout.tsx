@@ -18,8 +18,11 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <header className="w-full flex justify-between py-3 px-16  border-b-4 border-violet-700">
-          <article className="hover-text">part1</article>
-          <article className="hover-text">part2</article>
+          {["part1", "part2"].map(item => (
+            <article key={item} className="hover-text">
+              {item}
+            </article>
+          ))}
         </header>
         <main>{children}</main>
       </body>
