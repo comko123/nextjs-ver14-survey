@@ -6,4 +6,6 @@ function Part2() {
   )
 }
 
+/*peer , has , group 생성자 사용하기 */
+
 export default Part2

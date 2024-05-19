@@ -18,6 +18,10 @@
   .hover-text {
     @apply hover:text-indigo-500 cursor-pointer font-bold;
   }
+  .form-input {
+    @apply border-4 rounded-lg p-2 font-bold border-emerald-400 w-full 
+    placeholder:drop-shadow-lg invalid:border-rose-100 transition-colors;
+  }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

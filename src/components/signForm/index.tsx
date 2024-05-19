@@ -8,7 +8,7 @@ import FormBtn from "../formBtn"
 const SignForm = () => {
   const [state, action] = useFormState(server_action, null)
   return (
-    <form action={action} className="flex flex-col items-center gap-b-4 w-[50%] *:even:my-3">
+    <form action={action} className="flex flex-col items-center gap-b-4 w-[50%] *:even:my-3 ">
       {(
         [
           { text: "email", type: "email" },

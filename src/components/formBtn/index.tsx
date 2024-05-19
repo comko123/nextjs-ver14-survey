@@ -14,7 +14,10 @@ const FormBtn = () => {
   )
 }
 /*
-useFormStatus = 부모컴포넌트의 form을 찾아 이벤트를 갑지하여 내부에서 렌더링된다.
-주의사항 - form태그가 있는 컴포넌트에서 사용못함(form태그의 자식 컴포넌트에서 사용해야함)
+
+useFormStatus = 부모컴포넌트의 form을 찾아 이벤트를 감지하여 내부에서 렌더링된다.
+주의사항 - form태그가 있는 컴포넌트에서 사용불가능 (form태그의 자식 컴포넌트에서 사용해야하므로 
+컴포넌트를 분리해야할 필요가 있다.)
+엄청 유용한 hook인듯하다.
 */
 export default FormBtn
