@@ -2,7 +2,7 @@ import { FC } from "react"
 
 const SignInput: FC<{ text: string; type: string }> = ({ text, type }) => {
   return (
-    <section className="flex my-2 gap-x-2">
+    <section className="">
       <input
         type={type}
         name={text}
@@ -10,9 +10,6 @@ const SignInput: FC<{ text: string; type: string }> = ({ text, type }) => {
         placeholder={text}
         required
       />
-      {(type === "email" || type === "number") && (
-        <button className="gradient-btn w-[15%] py-2">inspect</button>
-      )}
     </section>
   )
 }

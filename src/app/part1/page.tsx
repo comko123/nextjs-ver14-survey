@@ -9,3 +9,8 @@ function Part1() {
 }
 
 export default Part1
+/*
+part 1남은 목록 
+test code 작성하기
+tailwind css 생성자 사용해보기
+ */

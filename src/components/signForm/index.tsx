@@ -3,11 +3,12 @@ import { server_action } from "@/action/serverAction"
 import { Fragment } from "react"
 import SignInput from "../signInput"
 import { useFormState } from "react-dom"
+import FormBtn from "../formBtn"
 
 const SignForm = () => {
   const [state, action] = useFormState(server_action, null)
   return (
-    <form action={action} className="flex flex-col items-center gap-b-4 w-[50%]">
+    <form action={action} className="flex flex-col items-center gap-b-4 w-[50%] *:even:my-3">
       {(
         [
           { text: "email", type: "email" },
@@ -25,7 +26,7 @@ const SignForm = () => {
           </article>
         </Fragment>
       ))}
-      <input type="submit" value="submit" className="gradient-btn w-[30%] py-2 mt-2" />
+      <FormBtn />
     </form>
   )
 }
@@ -34,4 +35,5 @@ export default SignForm
 
 /*
 useActionState === useFormState
+useFormState 여러번 써보기 => server action과 호환성이 좋은듯 하다.
 */

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import Link from "next/link"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,9 +19,11 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <header className="w-full flex justify-between py-3 px-16  border-b-4 border-violet-700">
-          {["part1", "part2"].map(item => (
+          {["part1", "part2", "part3"].map(item => (
             <article key={item} className="hover-text">
-              {item}
+              <Link href={item} prefetch={false}>
+                {item}
+              </Link>
             </article>
           ))}
         </header>

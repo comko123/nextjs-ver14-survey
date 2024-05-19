@@ -1,25 +1,23 @@
 import { z } from "zod"
-export const extenstion = z
-  .object({
-    email: z
-      .string({ required_error: "email is required" })
-      .min(8, "email to short")
-      .trim()
-      .toLowerCase(),
-    phone_number: z
-      .string({ required_error: "phone_number is required" })
-      .min(8, "recap to phone number")
-      .regex(/[+-eㄷ]/gim, "only number"),
-    password: z
-      .string({ required_error: "password is required" })
-      .min(8, "at least 8")
-      .trim()
-      .toLowerCase(),
-    password_confirm: z
-      .string({ required_error: "password_confirm is required" })
-      .min(8, "at least 8")
+import validator from "validator"
+
+const z_function =
+  (name: string) =>
+  (customError: string = "at least 8") =>
+    z
+      .string({ required_error: `${name} is required` })
+      .min(8, customError)
       .trim()
       .toLowerCase()
+
+export const extenstion = z
+  .object({
+    email: z_function("email")("email to short"),
+    phone_number: z_function("phone_number")("recap to phone number")
+      .regex(/[+-eㄷ]/gim, "only number")
+      .refine(data => validator.isMobilePhone(data, "ko-KR")),
+    password: z_function("password")(),
+    password_confirm: z_function("password_confirm")()
   })
   .refine(({ password, password_confirm }) => password === password_confirm, {
     path: ["password_confirm"],
