@@ -3,24 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply font-bold;
+  }
   input {
-    @apply outline-none;
+    @apply outline-none p-2 rounded-lg;
+  }
+  input[type="button"],
+  input[type="submit"] {
+    @apply rounded-2xl cursor-pointer text-white;
   }
 }
 
 @layer utilities {
   .gradient-btn {
-    @apply font-bold rounded-2xl bg-gradient-to-tl from-rose-400 via-amber-300 to-lime-400 text-white transition hover:scale-90 cursor-pointer;
+    @apply bg-gradient-to-tl from-rose-400 via-amber-300 to-lime-400 transition hover:scale-90;
+  }
+  .gradient-btn2 {
+    @apply bg-gradient-to-br from-purple-300 via-fuchsia-300 to-teal-300;
   }
 }
 
 @layer components {
   .hover-text {
-    @apply hover:text-indigo-500 cursor-pointer font-bold;
+    @apply hover:text-indigo-500 cursor-pointer;
   }
   .form-input {
-    @apply border-4 rounded-lg p-2 font-bold border-emerald-400 w-full 
+    @apply border-4 border-emerald-400 w-full 
     placeholder:drop-shadow-lg invalid:border-rose-100 transition-colors;
+  }
+  .form-page-layout {
+    @apply grid grid-cols-1 place-items-center w-full h-[75vh];
+  }
+  .form-page-title {
+    @apply text-2xl -mb-16;
   }
 }
 input::-webkit-outer-spin-button,

@@ -1,8 +1,8 @@
 import SignForm from "@/components/signForm"
 function Part1() {
   return (
-    <main className="grid grid-cols-1 place-items-center w-full h-[75vh]">
-      <h1 className="font-bold text-2xl -mb-16">Sign Up Form</h1>
+    <main className="form-page-layout">
+      <h1 className="form-page-title">Sign Up Form</h1>
       <SignForm />
     </main>
   )
