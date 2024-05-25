@@ -7,9 +7,7 @@ const FormBtn = () => {
       type="submit"
       disabled={pending}
       value={pending ? "waiting..." : "submit"}
-      className={`${
-        pending ? "bg-slate-400 text-white rounded-xl font-bold" : "gradient-btn"
-      }  w-[30%] py-2 mt-2`}
+      className={`${pending ? "bg-slate-400 text-white rounded-xl" : "gradient-btn"}  w-[30%] mt-2`}
     />
   )
 }

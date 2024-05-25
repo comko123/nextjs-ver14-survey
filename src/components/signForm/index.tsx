@@ -20,9 +20,7 @@ const SignForm = () => {
         <Fragment key={item.text}>
           <article className="w-full flex flex-col my-[0.15rem]">
             <SignInput {...item} />
-            <section className="font-bold ml-1 -mt-2 text-red-600">
-              {state?.fieldErrors[item.text]}
-            </section>
+            <section className="ml-1 -mb-5 text-red-600">{state?.fieldErrors[item.text]}</section>
           </article>
         </Fragment>
       ))}
