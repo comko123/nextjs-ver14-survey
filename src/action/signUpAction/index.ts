@@ -2,7 +2,7 @@
 
 import { extenstion } from "@/utils/extensition"
 
-export const server_action = async (_: any, data: FormData) => {
+export const sign_up_action = async (_: any, data: FormData) => {
   const schema = {
     email: data.get("email"),
     phone_number: data.get("phone_number"),

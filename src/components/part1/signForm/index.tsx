@@ -1,12 +1,12 @@
 "use client"
-import { server_action } from "@/action/serverAction"
+import { sign_up_action } from "@/action/signUpAction"
 import { Fragment } from "react"
-import SignInput from "../signInput"
 import { useFormState } from "react-dom"
 import FormBtn from "../formBtn"
+import SignInput from "../signInput"
 
 const SignForm = () => {
-  const [state, action] = useFormState(server_action, null)
+  const [state, action] = useFormState(sign_up_action, null)
   return (
     <form action={action} className="flex flex-col items-center gap-b-4 w-[50%] *:even:my-3 ">
       {(

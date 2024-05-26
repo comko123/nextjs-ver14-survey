@@ -9,9 +9,10 @@
   input {
     @apply outline-none p-2 rounded-lg;
   }
+  a,
   input[type="button"],
   input[type="submit"] {
-    @apply rounded-2xl cursor-pointer text-white;
+    @apply rounded-2xl cursor-pointer text-violet-400;
   }
 }
 
@@ -20,14 +21,23 @@
     @apply bg-gradient-to-tl from-rose-400 via-amber-300 to-lime-400 transition hover:scale-90;
   }
   .gradient-btn2 {
-    @apply bg-gradient-to-br from-purple-300 via-fuchsia-300 to-teal-300;
+    @apply bg-gradient-to-br from-purple-300 via-fuchsia-300 to-teal-300 text-center min-w-28;
+  }
+  .btn-peer-event {
+    @apply peer-invalid:bg-gradient-to-br peer-invalid:from-slate-300  peer-invalid:via-slate-300 peer-invalid:to-slate-300;
+  }
+  .btn-group-event {
+    @apply group-invalid:bg-gradient-to-br group-invalid:from-slate-300  group-invalid:via-slate-300 group-invalid:to-slate-300;
+  }
+  .flex-center {
+    @apply size-full flex justify-center items-center;
+  }
+  .hover-text {
+    @apply hover:text-indigo-500 cursor-pointer;
   }
 }
 
 @layer components {
-  .hover-text {
-    @apply hover:text-indigo-500 cursor-pointer;
-  }
   .form-input {
     @apply border-4 border-emerald-400 w-full 
     placeholder:drop-shadow-lg invalid:border-rose-100 transition-colors;
@@ -37,6 +47,15 @@
   }
   .form-page-title {
     @apply text-2xl -mb-16;
+  }
+  .form-continer {
+    @apply flex mb-5 flex-col gap-y-4;
+  }
+  .form-auth {
+    @apply flex gap-x-2;
+  }
+  .input-rose {
+    @apply bg-rose-100 w-[35vw];
   }
 }
 input::-webkit-outer-spin-button,

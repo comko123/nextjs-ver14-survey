@@ -1,4 +1,4 @@
-import SignForm from "@/components/signForm"
+import SignForm from "@/components/part1/signForm"
 function Part1() {
   return (
     <main className="form-page-layout">
