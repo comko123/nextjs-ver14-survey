@@ -32,3 +32,5 @@ const CertifiedForm = () => {
 }
 
 export default CertifiedForm
+
+// 인증 완료된 input을 state로 수정을 방지하는것이 아닌 투명필터를 생성하여 수정을 못하도록 변경
