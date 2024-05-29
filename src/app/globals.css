@@ -55,7 +55,7 @@
     @apply flex gap-x-2;
   }
   .input-rose {
-    @apply bg-rose-100 w-[35vw];
+    @apply bg-rose-100 w-[35vw] placeholder:drop-shadow-lg;
   }
 }
 input::-webkit-outer-spin-button,

@@ -1,8 +1,10 @@
 interface Auth {
-  title: string
-  [key: string]: boolean | string
+  title: "email" | "phone"
 }
 
-interface Certified_State {
-  [key: string]: boolean
+type Certified_State = {
+  [k in Auth["title"]]: boolean
+} & {
+  second_certified: (title: Auth["title"]) => void
+  create_filter: (title: Auth["title"]) => void
 }

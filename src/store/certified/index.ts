@@ -1,21 +1,15 @@
 import { create } from "zustand"
 
-// hook기반으로 생성을 한다.
-export const useCertifiedState = create<Certified_State>(set => ({
-  // 상태선언
-  email: true,
-  email_auth: false,
+export const useCertifiedState = create<Omit<Certified_State, "create_filter">>(set => ({
+  // 추가 인증 input
+  email: false,
   phone: false,
-  phone_auth: false,
-  submit: false
-
-  // 함수를 사용하여 set사용시 상태 가져와 변경가능
-  //   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  //   removeAllBears: () => set({ bears: 0 }),
+  second_certified: (title: Auth["title"]) => set(state => ({ ...state, [title]: !state[title] }))
 }))
 
-export const useCertifiedAuth = create<Certified_State>(set => ({
-  // 상태선언
+export const useCertifiedAuth = create<Omit<Certified_State, "second_certified">>(set => ({
+  // 필터 생성
   email: false,
-  phone: false
+  phone: false,
+  create_filter: (title: Auth["title"]) => set(state => ({ ...state, [title]: !state[title] }))
 }))
