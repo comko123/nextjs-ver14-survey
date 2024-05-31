@@ -2,6 +2,8 @@ interface Auth {
   title: "email" | "phone"
 }
 
+type Ref_Value = string | undefined
+
 type Certified_State = {
   [k in Auth["title"]]: boolean
 } & {

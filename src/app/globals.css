@@ -57,6 +57,9 @@
   .input-rose {
     @apply bg-rose-100 w-[35vw] placeholder:drop-shadow-lg;
   }
+  .input-text {
+    @apply -mb-4 mt-1 ml-2;
+  }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
