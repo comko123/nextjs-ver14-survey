@@ -1,14 +1,14 @@
 "use client"
 import { FC, useRef } from "react"
-import { useCertifiedAuth, useCertifiedState } from "@/store/certified"
+import useSecondAuth from "@/hooks/useSecondAuth"
+import Error from "../error"
 
 const SecondAuth: FC<Auth> = ({ title }) => {
-  const state = useCertifiedState(state => state)
-  const { create_filter } = useCertifiedAuth(state => state)
   const ref = useRef<HTMLInputElement>(null)
+  const { error, secondFn, name } = useSecondAuth({ title, ref })
   return (
     <>
-      {state[title] && (
+      {name && (
         <section className="form-auth">
           <article className="flex gap-x-2">
             <input
@@ -24,14 +24,10 @@ const SecondAuth: FC<Auth> = ({ title }) => {
               type="button"
               value="auth"
               className="gradient-btn2 btn-peer-event"
-              onClick={() => {
-                console.log(ref.current?.value)
-                state.second_certified(title)
-                create_filter(title)
-                //해당익명함수는 useCallback로 최적화를 할 필요가 없음.
-              }}
+              onClick={secondFn}
             />
           </article>
+          <Error condition={error} />
         </section>
       )}
     </>
