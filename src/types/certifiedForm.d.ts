@@ -12,3 +12,16 @@ type Certified_State = {
 }
 
 type Certified_Parse<str extends "create_filter" | "second_certified"> = Omit<Certified_State, str>
+
+interface second_auth {
+  inputStr: Ref_Value
+  error: boolean
+}
+
+interface click_auth extends Auth {
+  ref: RefObject<HTMLInputElement>
+}
+
+interface input_error {
+  condition: boolean
+}
