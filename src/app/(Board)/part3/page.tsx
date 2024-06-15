@@ -4,6 +4,7 @@ async function Part3() {
     await (await fetch(process.env.BOARD_MOCK_IMAGE as string)).json()
   ])
   console.log(data)
+  //branch test
   return (
     <main>
       <h1>Board</h1>
