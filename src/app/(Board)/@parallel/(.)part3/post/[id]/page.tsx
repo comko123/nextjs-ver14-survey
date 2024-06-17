@@ -6,12 +6,9 @@ const InterceptingDetail = () => {
 
   return (
     <>
-      <section className=" flex justify-center items-center">
-        <div
-          onClick={back}
-          className="w-[100vw] h-[100vh] fixed top-0 bg-slate-700 bg-opacity-50"
-        />
-        <article className="z-10 w-1/2 h-[72vh] bg-white rounded-xl">
+      <section className=" flex justify-center items-center fixed top-0 right-0 size-full">
+        <div onClick={back} className="size-full bg-slate-700 bg-opacity-50 absolute" />
+        <article className="z-10 size-3/4 bg-white rounded-xl">
           <h3>Intercepting Detail</h3>
           <span onClick={back}>x</span>
         </article>
