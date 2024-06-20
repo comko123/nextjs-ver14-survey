@@ -35,6 +35,18 @@
   .hover-text {
     @apply hover:text-indigo-500 cursor-pointer;
   }
+  .str-three-dash {
+    @apply block overflow-hidden text-ellipsis whitespace-nowrap;
+  }
+  .grid-content {
+    @apply grid place-items-center;
+  }
+  .fixed-content {
+    @apply fixed top-0 right-0;
+  }
+  .bg-opcity-gray {
+    @apply bg-slate-700 bg-opacity-50;
+  }
 }
 
 @layer components {
@@ -59,6 +71,12 @@
   }
   .input-text {
     @apply -mb-4 mt-1 ml-2;
+  }
+  .dash-board-blue-box {
+    @apply border-4 border-dashed border-blue-400;
+  }
+  .border-link-text-size {
+    @apply min-w-52 max-w-52;
   }
 }
 input::-webkit-outer-spin-button,

@@ -1,8 +1,18 @@
-type post = {
+interface album {
+  thumbnailUrl: string
+  url: string
+  albumId: string
+}
+
+interface post {
   userId: string
   id: string
   title: string
   body: string
-}[]
+}
 
-type images = (Omit<post[number], "body"> & { thumbnailUrl: string; url: string })[]
+type images = (Omit<post, "body"> & Omit<album, "albumId">)[]
+
+type dynamic_images = Omit<post, "body" | "userId"> & album
+
+type dynamic_params = { params: { id: string } }
