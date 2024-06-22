@@ -10,7 +10,7 @@ async function Part3() {
       <h1 className="mb-3">Board</h1>
       <section className="grid-content grid-cols-3">
         {post.map((item, index) => (
-          <article key={item.userId}>
+          <article key={item.title}>
             <Link
               href={`/part3/post/${index}`}
               prefetch={false}
@@ -26,3 +26,5 @@ async function Part3() {
 }
 
 export default Part3
+// next font 적용하기
+//다기능 route 주석작성하기
