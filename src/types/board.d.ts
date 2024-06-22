@@ -11,8 +11,10 @@ interface post {
   body: string
 }
 
+type detail_box = Pick<post, "id"> & { scale?: boolean }
+
 type images = (Omit<post, "body"> & Omit<album, "albumId">)[]
 
-type dynamic_images = Omit<post, "body" | "userId"> & album
+type dynamic_image = Omit<post, "body" | "userId"> & album
 
 type dynamic_params = { params: { id: string } }

@@ -9,7 +9,18 @@ const nextConfig = {
         taint: true
     },
     images: {
-        remotePatterns: []
+        remotePatterns: [{
+            protocol: "https",
+            hostname: process.env.CONFIG_IMAGE_ROOT,
+            port: "",
+            pathname: "/600/**"
+        },
+        {
+            protocol: "https",
+            hostname: process.env.CONFIG_IMAGE_ROOT,
+            port: "",
+            pathname: "/150/**"
+        }]
     }
 };
 
