@@ -6,4 +6,5 @@ const BoardLayout = ({ children, parallel }: layout) => {
     </div>
   )
 }
+//parallel route 적용
 export default BoardLayout

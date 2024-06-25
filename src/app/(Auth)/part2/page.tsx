@@ -8,8 +8,6 @@ function Part2() {
     </main>
   )
 }
-
-/*peer , has , group 생성자 사용하기 */
 /*
 peer and group의 차이점
 peer - 한단계 위의 부모 html엘리먼트가 깉은 html태그안에서 사용 가능
