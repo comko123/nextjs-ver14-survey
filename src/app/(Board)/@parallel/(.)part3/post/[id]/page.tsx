@@ -1,10 +1,11 @@
 import Back from "@/components/part3/back"
+import Blind from "@/components/part3/blind"
 import MainContent from "@/components/part3/mainContent"
 const InterceptingDetail = ({ params: { id } }: dynamic_params) => {
   return (
     <>
       <div className="flex-center fixed-content ">
-        <div className="size-full bg-opcity-gray absolute" />
+        <Blind />
         <MainContent id={id} scale />
         <Back />
       </div>
