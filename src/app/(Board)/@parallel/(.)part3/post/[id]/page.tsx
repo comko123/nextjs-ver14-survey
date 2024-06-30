@@ -1,6 +1,18 @@
 import Back from "@/components/part3/back"
 import Blind from "@/components/part3/blind"
+import { postFetch } from "@/utils/postFetch"
 import MainContent from "@/components/part3/mainContent"
+
+export const generateMetadata = async ({ params: { id } }: dynamic_params) => {
+  const { post } = await postFetch(+id)
+  return {
+    title: post.title,
+    description: post.body
+  }
+}
+
+//특정 route에서는 generateMetadata함수가 작동하지 않는다.
+
 const InterceptingDetail = ({ params: { id } }: dynamic_params) => {
   return (
     <>
