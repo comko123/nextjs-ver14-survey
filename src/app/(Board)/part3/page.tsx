@@ -1,4 +1,10 @@
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "part3",
+  description: "this page is third part."
+}
 
 async function Part3() {
   const post: post[] = (await (await fetch(process.env.BOARD_MOCK_DATA as string)).json()).slice(
@@ -26,5 +32,3 @@ async function Part3() {
 }
 
 export default Part3
-// next font 적용하기
-//다기능 route 주석작성하기

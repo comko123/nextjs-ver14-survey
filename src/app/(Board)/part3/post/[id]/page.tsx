@@ -1,4 +1,13 @@
+import { postFetch } from "@/utils/postFetch"
 import MainContent from "@/components/part3/mainContent"
+
+export const generateMetadata = async ({ params: { id } }: dynamic_params) => {
+  const { post } = await postFetch(+id)
+  return {
+    title: post.title,
+    description: post.body
+  }
+}
 
 const Detail = ({ params: { id } }: dynamic_params) => {
   return <MainContent id={id} />
