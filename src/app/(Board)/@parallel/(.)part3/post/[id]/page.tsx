@@ -11,7 +11,9 @@ export const generateMetadata = async ({ params: { id } }: dynamic_params) => {
   }
 }
 
-//특정 route에서는 generateMetadata함수가 작동하지 않는다.
+/*
+의도한 것인지 기능개발이 진행중인것인지 모르겠지만 특정 route에서는 generateMetadata함수가 작동하지 않는다.
+*/
 
 const InterceptingDetail = ({ params: { id } }: dynamic_params) => {
   return (

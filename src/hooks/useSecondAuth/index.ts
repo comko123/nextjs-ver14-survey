@@ -29,3 +29,7 @@ const useSecondAuth = ({ title, ref }: click_auth) => {
   return { error: input.error, name: state[title], secondFn }
 }
 export default useSecondAuth
+
+/* 앞으로 나올 react 19 version에서는 함수의 리턴값, 함수, 컴포넌트의 
+   렌더링 최적화를 자동으로 처리한다는 발표가 있었기 떄문에 최적화의 자동처리 기능만 잘 구현이되어 나온다면
+   useCallback, useMemo, react.memo와같은 메모이제이션을 위한 도구들은 사용할 필요가 없을듯하다...*/
