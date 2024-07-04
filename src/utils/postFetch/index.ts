@@ -16,7 +16,7 @@ export const postFetch = async (id: number) => {
 
 /*
 현재 nextjs 14버전의 fetch함수는 api요청에대한 응답을 기본적으로 caching한다. 
-(15버전에서는 별도의 설정을 추가해야 caching을 해준다)
+(15버전에서는 별도의 설정을 추가해야 caching힌다)
 
 추가적으로 nextjs 14버전에서 build를 하면 dynamic페이지인지 static페이지인지 nextjs가 판별하여
 페이지를 생성해주는데 dynamic페이지를 생성했는데 static페이지로 판별하거나 그반대의 경우로 판별하는 일이

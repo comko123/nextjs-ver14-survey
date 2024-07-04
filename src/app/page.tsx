@@ -13,5 +13,4 @@ export default function Home() {
     </main>
   )
 }
-// meta-data 적용하기
 // test-code 작성하기
